@@ -6,8 +6,8 @@ import {tapHandler} from "./tapHandler";
 import {useState} from "react";
 
 export function useMultiTap(
-  delay: number = 400,
   fallback: TFallbackHandler = () => {},
+  delay: number = 400,
 ): TUseMultiTap {
   const setTaps = useState(0)[1];
   const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout>();
